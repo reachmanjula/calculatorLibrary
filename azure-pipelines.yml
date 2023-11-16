@@ -1,13 +1,7 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- master
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- bash: echo "Hello world"
+name: $(Date:yyyyMMdd)$(Rev:.r)
+variables:
+  var1: value1
+jobs:
+- job: One
+  steps:
+  - script: echo First step!
